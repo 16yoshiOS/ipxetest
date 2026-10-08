@@ -1,0 +1,37 @@
+#!ipxe
+dhcp
+menu Selection
+item 8176 (windows 8 build 8176)
+item windows7850 (windows 8 build 7850)
+item unstabletiny11 (old tiny11)
+item unstabletiny1126h2 (old tiny11 26h2)
+item windows8102 (windows 8 build 8102)
+item windows8lite (windows 81 lite)
+item windowsxlite (windows 11 26h1 lite)
+item 7762 (windows ahh 7762 build)
+
+choose os && goto ${os}
+
+:8176
+sanboot http://archive.org/download/6.2.8176.0.fbl-core-2-sid-dev.-120104-2026-amd-64fre-client-prerelease-retail-en/6.2.8176.0.fbl_core2_sid_dev.120104-2026_x86fre_client-prerelease_retail_en-us-HB1_CCS_X86FRE_EN-US_DV5.iso
+
+:windows7850
+sanboot http://archive.org/download/6.1.7850.0.winmain-win-8m-1.100922-1508-x-86fre-client-enterprise-en-us/6.1.7850.0.winmain_win8m1.100922-1508_x86fre_client-enterprise_en-us.iso
+
+:unstabletiny11
+sanboot http://archive.org/download/tiny11versions/tiny11%2025h2%2026200.iso
+
+:unstabletiny1126h2
+sanboot http://archive.org/download/tiny11-26h2-by16yoshi/tiny11%2026h2%20beta%201.iso
+
+:windows8102
+sanboot http://archive.org/download/windows-8-build-8102-debombed-x86/8102Debombedx86.iso
+
+:windows8lite
+sanboot http://archive.org/download/unmicrosoftedos81/UnMicrosoftedOS%208.1%20Beta%202%20codename%20Betta%20Fish.iso
+
+:windowsxlite
+sanboot http://archive.org/download/win-11-core/Win11Core.iso
+
+:7762
+sanboot http://archive.org/download/MicrosoftWindows8BuildCollection/6.1.7762.0.fbl_grfx_dev1.100613-1700_x86fre_client-multisku_retail_en-us-Windows7.iso
